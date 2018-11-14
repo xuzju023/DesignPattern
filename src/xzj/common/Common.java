@@ -7,6 +7,6 @@ public class Common {
 	}
 	public static String encode(String url) {
 		assert url!=null:"字符串为空"; 
-		return url;
+		return url; 
 	}
 }
