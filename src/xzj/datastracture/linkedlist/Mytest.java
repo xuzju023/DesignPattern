@@ -9,7 +9,7 @@ public class Mytest {
 		linkedList.addAtHead(1);
 		linkedList.addAtTail(2);
 		linkedList.addAtTail(3);
-		linkedList.addAtTail(4);
+		linkedList.addAtTail(4); 
 		linkedList.addAtIndex(2, 5);  // linked list becomes 1->2->3
 		//System.out.println(linkedList.next.val);
 		
