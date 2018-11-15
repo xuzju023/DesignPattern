@@ -8,6 +8,6 @@ public class Elvis {
 		return INSTANCE;
 	}
 	public static void main(String[] args) {
-		System.out.println(getInstance());
+		System.out.println(getInstance()); 
 	}
 }
