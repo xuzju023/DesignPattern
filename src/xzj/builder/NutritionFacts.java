@@ -44,6 +44,7 @@ public class NutritionFacts {
 		}                        
 	
 	}
+	//constuctor<=>director :can be extract out from this class to a Director
 	private NutritionFacts (MyBuilder builder) {
 		servings=builder.servings;
 		servingSize=builder.servingSize;

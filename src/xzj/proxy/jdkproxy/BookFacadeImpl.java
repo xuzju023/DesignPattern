@@ -7,8 +7,13 @@ package xzj.proxy.jdkproxy;
  */
 public class BookFacadeImpl implements BookFacade {
     @Override
-    public void addBook() {
-        System.out.println("增加图书方法。。。");
+    public void addBook(String msg) {
+        System.out.println(msg);
     }
+
+	@Override
+	public void addBook2(String msg) {
+		System.out.println(msg);
+	}
 
 }

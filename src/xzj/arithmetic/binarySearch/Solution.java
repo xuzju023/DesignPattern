@@ -1,5 +1,10 @@
 package xzj.arithmetic.binarySearch;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Solution  extends GuessGame{
 //		Example 1:
 //
@@ -328,14 +333,40 @@ public class Solution  extends GuessGame{
         }
     	return new int[] {-1,-1};
     }
-    
+//    Given a sorted array, two integers k and x, find the k closest elements to x in the array. The result should also be sorted in ascending order. If there is a tie, the smaller elements are always preferred.
+//
+//    Example 1:
+//    Input: [1,2,3,4,5], k=4, x=3
+//    Output: [1,2,3,4]
+//    Example 2:
+//    Input: [1,2,3,4,5], k=4, x=-1
+//    Output: [1,2,3,4]
+//    Note:
+//    The value k is positive and will always be smaller than the length of the sorted array.
+//    Length of the given array is positive and will not exceed 10^4
+//    Absolute value of elements in the array and x will not exceed 10^4
+	//解法一:实际上相当于在长度为n的数组中去掉n-k个数字，而且去掉的顺序肯定是从两头开始去，因为距离x最远的数字肯定在首尾出现。那么问题就变的明朗了，每次比较首尾两个数字跟x的距离，将距离大的那个数字删除，直到剩余的数组长度为k为止
+	//解法二:二分搜索,在目标数组是个连续的区间。目标数组最小值lo必然落在arr.size()-k这段区间上。lo左边点到x的距离必然>lo+k的距离,反之lo右边点到x的距离必然<lo+k到x的距离
+   public static List<Integer> findClosestElements(int[] arr, int k, int x) {
+	   List<Integer> list = new ArrayList<>();
+	   for (int num: arr){
+		   list.add(num);
+	   }
+	   int lo = 0, hi = list.size() - k;
+	   while (lo < hi) {
+		   int mid = (lo + hi) / 2;
+		   if (x - list.get(mid) > list.get(mid+k) - x)
+			   lo = mid + 1;
+		   else
+			   hi = mid;
+	   }
+	   return list.subList(lo, lo + k);
+    }
     
 	public static void main(String[] args) {
-		int[] nums= {5,7,7,8,8,10};
-		int[] searchRange = searchRange(nums, 8);
-		for (int i : searchRange) {
-			System.out.println(i);
-		}
+		int[] nums= {1,2,5,5,6,6,7,7,8,9};
+		List<Integer> res = findClosestElements(nums, 7, 7);
+		System.out.println(res);
 	}
 	
 }
