@@ -1,6 +1,5 @@
 package xzj.datastracture.Tree.BST;
 
-import org.junit.Test;
 
 import xzj.datastracture.Tree.BST.TreeNode.BSTIterator1;
 import xzj.datastracture.Tree.BST.TreeNode.BSTIterator2;
@@ -18,7 +17,7 @@ public class BSTtest {
 		right.left=new TreeNode(7);
 		right.right=new TreeNode(9);*/
 	//验证是否为二叉搜索树
-	@Test
+	//@Test
 	public void test1() throws Exception {
 		TreeNode root= new TreeNode(5);
 		root.left=new TreeNode(1);
@@ -29,7 +28,7 @@ public class BSTtest {
 		BSTsolution.isValidBST(root);
 	}
 	//迭代器1
-	@Test
+	//@Test
 	public void test2() throws Exception {
 		TreeNode root= new TreeNode(5);
 		root.left=new TreeNode(1);
@@ -43,7 +42,7 @@ public class BSTtest {
 		}
 	}
 	//迭代器2
-	@Test
+	//@Test
 	public void test3() throws Exception {
 		TreeNode root= new TreeNode(5);
 		root.left=new TreeNode(1);

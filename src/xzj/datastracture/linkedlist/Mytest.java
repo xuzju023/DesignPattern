@@ -1,9 +1,8 @@
 package xzj.datastracture.linkedlist;
 
-import org.junit.Test;
 
 public class Mytest {
-	@Test
+	//@Test
 	public void test1() throws Exception {
 		MyLinkedList linkedList = new MyLinkedList();
 		linkedList.addAtHead(1);
@@ -21,7 +20,7 @@ public class Mytest {
 			linkedList=linkedList.next;
 		}
 	}
-	@Test
+	//@Test
 	public void test2() throws Exception {
 		MyLinkedList head = new MyLinkedList();
 		MyLinkedList node2 = new MyLinkedList();
