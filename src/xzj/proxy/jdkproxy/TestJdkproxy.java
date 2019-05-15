@@ -1,5 +1,7 @@
 package xzj.proxy.jdkproxy;
 
+import java.lang.reflect.Proxy;
+
 public class TestJdkproxy {
 	public static void main(String[] args) {
 		BookFacadeProxy proxyFactory = new BookFacadeProxy();

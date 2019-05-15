@@ -52,7 +52,7 @@ public class Solution  extends GuessGame{
 			beginIndex=midIndex;
 			return search2(nums, target, beginIndex, endIndex);
 		}
-		
+
 	}
 //	Example 1:
 //
@@ -83,7 +83,7 @@ public class Solution  extends GuessGame{
 		}
 		return x;
 	}
-	
+
 	public static int sqrt(int x) {
 	    if (x == 0)
 	        return 0;
@@ -98,7 +98,7 @@ public class Solution  extends GuessGame{
 	            left = mid + 1;
 	        }
 	    }
-	} 
+	}
 //	We are playing the Guess Game. The game is as follows:
 //
 //		I pick a number from 1 to n. You have to guess which number I picked.
@@ -131,7 +131,7 @@ public class Solution  extends GuessGame{
         }
 		return begin;
     }
-	
+
 //	Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
 //
 //	(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
@@ -194,7 +194,7 @@ public class Solution  extends GuessGame{
 		int end =n;
 		while(end>begin){
 			int mid=begin+(end-begin)/2;
-			
+
 			if(isBadVersion(mid)) {
 				end=mid;
 			}else {
@@ -210,12 +210,12 @@ public class Solution  extends GuessGame{
 			return false;
 		}
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 //		Example 1:
 //
 //		Input: nums = [1,2,3,1]
@@ -246,7 +246,7 @@ public class Solution  extends GuessGame{
 
 		return 0;
 	}
-	
+
 //	Find Minimum in Rotated Sorted Array
 //	  Go to Discuss
 //	Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -265,7 +265,7 @@ public class Solution  extends GuessGame{
 //
 //	Input: [4,5,6,7,0,1,2]
 //	Output: 0
-	
+
     public int findMin(int[] nums) {
     	int begin=0;
     	int end=nums.length-1;
@@ -284,7 +284,7 @@ public class Solution  extends GuessGame{
     	}
     	return nums[end];
     }
-	
+
 
 //    Search for a Range
 //    Go to Discuss
@@ -362,11 +362,40 @@ public class Solution  extends GuessGame{
 	   }
 	   return list.subList(lo, lo + k);
     }
-    
-	public static void main(String[] args) {
-		int[] nums= {1,2,5,5,6,6,7,7,8,9};
-		List<Integer> res = findClosestElements(nums, 7, 7);
-		System.out.println(res);
+    //Implement pow(x, n), which calculates x raised to the power n (xn).
+	//	Example 1:
+	//
+	//	Input: 2.00000, 10
+	//	Output: 1024.00000
+	//	Example 2:
+	//
+	//	Input: 2.10000, 3
+	//	Output: 9.26100
+	//	Example 3:
+	//
+	//	Input: 2.00000, -2
+	//	Output: 0.25000
+	//	Explanation: 2-2 = 1/22 = 1/4 = 0.25
+
+	public static double myPow(double x, int n) {
+		if(n==0){
+            return 1;
+        }
+        if(n<0){
+		    return 1/(x*myPow(x,-(n+1)));
+        }
+		if(n%2==0){
+			return myPow(x*x,n/2);
+		}else{
+			return x*myPow(x*x,(n-1)/2);
+		}
+
 	}
-	
+
+
+	public static void main(String[] args) {
+        double v = myPow(2, -2147483647);
+        System.out.println(v);
+    }
+
 }
