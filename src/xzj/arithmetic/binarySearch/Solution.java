@@ -419,11 +419,41 @@ public class Solution  extends GuessGame{
 		}
 
 	}
-
+//	Find Smallest Letter Greater Than Target
+//	Go to Discuss
+//	Given a list of sorted characters letters containing only lowercase letters, and given a target letter target, find the smallest element in the list that is larger than the given target.
+//
+//	Letters also wrap around. For example, if the target is target = 'z' and letters = ['a', 'b'], the answer is 'a'.
+//	Examples:
+//	Input:
+//	letters = ["c", "f", "j"]
+//	target = "a"
+//	Output: "c"
+	public static char nextGreatestLetter(char[] letters, char target) {
+		int begin=0;
+		int end=letters.length-1;
+		int tar=(int)target;
+		while(end>begin){
+			int mid=begin+(end-begin)/2;
+			if(mid==0&&(int)(letters[mid])>tar){
+				return letters[mid];
+			}
+			if((int)letters[mid]<=tar&&tar<(int)letters[mid+1]){
+				return letters[mid+1];
+			}
+			if((int)letters[mid]>tar){
+				end=mid;
+			}else{
+				begin=mid+1;
+			}
+		}
+		return letters[0];
+	}
 
 	public static void main(String[] args) {
-		System.out.println(isPerfectSquare(5));
-		//System.out.println(202050*202050);
+		char[] letters={'c', 'f', 'j'};
+
+		System.out.println(nextGreatestLetter(letters,'c'));
 	}
 	
 }
