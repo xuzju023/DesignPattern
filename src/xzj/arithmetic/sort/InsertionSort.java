@@ -6,19 +6,13 @@ public class InsertionSort {
     static int[] sort(int[] arr){
         int len=arr.length;
         for (int i = 1; i <len ; i++) {
-            int j=0;
-            for (; j <i ; j++) {
-                if(arr[i]<arr[j]){
-                    break;
-                }
+            int temp=arr[i];
+            int j=i-1;
+            while(j>=0&&arr[j]<temp){
+                arr[j+1]=arr[j];
+                j--;
             }
-            int pre=arr[i];
-            int temp;
-            for(;j<i+1;j++){
-                temp=arr[j];
-                arr[j]=pre;
-                pre=temp;
-            }
+            arr[j+1]=temp;
         }
         return arr;
     }

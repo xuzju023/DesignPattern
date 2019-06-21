@@ -1,5 +1,5 @@
 package xzj.decorator;
 
-public abstract class BaseDiscount {
-    public abstract void discount();
+public interface BaseDiscount {
+      void discount();
 }

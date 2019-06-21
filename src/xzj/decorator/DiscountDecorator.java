@@ -1,6 +1,6 @@
 package xzj.decorator;
 
-public abstract class DiscountDecorator extends BaseDiscount{
+public abstract class DiscountDecorator implements BaseDiscount{
 
     public BaseDiscount component;
 
