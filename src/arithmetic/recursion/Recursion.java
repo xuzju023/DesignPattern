@@ -1,5 +1,8 @@
 package arithmetic.recursion;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @date 2019/11/4 13:49
  * @author: <a href=mailto:xuzj@bonree.com>胥智钧</a>
@@ -84,6 +87,27 @@ public class Recursion {
         memo[i] = climb_Stairs(i + 1, n, memo) + climb_Stairs(i + 2, n, memo);
         return memo[i];
     }
+
+    /**
+     *
+     *   输入一个链表，按链表从尾到头的顺序返回一个ArrayList。
+     */
+    public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+        ArrayList<Integer> result = new ArrayList<>();
+        if(listNode!=null){
+            deal(listNode,result);
+        }
+
+        return result;
+    }
+    public void deal(ListNode cur, ArrayList<Integer> result){
+        if(cur.next!=null){
+            deal(cur.next,result);
+        }
+        result.add(cur.val);
+    }
+
+
 
     public static void main(String[] args) {
         //1134903170

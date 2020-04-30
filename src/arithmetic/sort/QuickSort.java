@@ -1,5 +1,8 @@
 package arithmetic.sort;
 
+/**
+ * 快速排序 平均时间复杂度:O(nlogn)	 空间复杂度:O(nlogn)	稳定度：不稳定
+ */
 public class QuickSort {
 
 
@@ -9,7 +12,7 @@ public class QuickSort {
         quickSort(arr,low,high);
         return arr;
     }
-  static    void quickSort(int[] arr,int low,int high){
+  static void quickSort(int[] arr,int low,int high){
         if(low<high) {
             int left=low;
             int right=high;
@@ -31,10 +34,10 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr={3,2,1,9,55,44,98,34,35};
+        int[] arr={44,2,1,9,55,3,98,34,35};
         int[] sort = sort(arr);
         for (int i = 0; i <sort.length ; i++) {
-            System.out.println(sort[i]);
+            System.out.print(sort[i]+" ");
         }
     }
 }
