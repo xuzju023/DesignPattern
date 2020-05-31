@@ -5,7 +5,7 @@ package designPattern.Strategy;
  * @Description:
  * @Date: Created in 15:58 2019/5/7
  */
-public class KillDragon {
+public class KillDragon implements  KillStrategy{
     private KillStrategy strategy;
 
     public KillDragon(KillStrategy strategy) {
@@ -15,6 +15,7 @@ public class KillDragon {
         this.strategy = strategy;
     }
 
+    @Override
     public void execute() {
         strategy.execute();
     }

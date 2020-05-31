@@ -13,16 +13,19 @@ public class NutritionFacts {
 	
 	public static class MyBuilder implements Builder<NutritionFacts>{
 		//Required parameters
-		private final int servingSize;
-		private final int servings;
+		private  int servingSize;
+		private  int servings;
 		
 		//optional parameters - initialized to default values
 		private int calories =0;
 		private int fat =0;
 		private int carbohydrate =0;
 		private int sodium =0;
-		
-		public MyBuilder(int servingSize,int servings) {
+
+		public MyBuilder() {
+		}
+
+		public MyBuilder(int servingSize, int servings) {
 			this.servings=servings;
 			this.servingSize=servings;
 		}
@@ -43,6 +46,9 @@ public class NutritionFacts {
 			return new NutritionFacts(this);
 		}                        
 	
+	}
+	public static MyBuilder getbuilder(){
+		return new MyBuilder();
 	}
 	//constuctor<=>director :can be extract out from this class to a Director
 	private NutritionFacts (MyBuilder builder) {

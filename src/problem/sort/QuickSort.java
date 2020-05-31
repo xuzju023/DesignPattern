@@ -1,4 +1,4 @@
-package arithmetic.sort;
+package problem.sort;
 
 /**
  * 快速排序 平均时间复杂度:O(nlogn)	 空间复杂度:O(nlogn)	稳定度：不稳定

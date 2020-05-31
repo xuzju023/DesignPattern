@@ -1,4 +1,4 @@
-package arithmetic.sort;
+package problem.sort;
 
 public class MergeSort {
 

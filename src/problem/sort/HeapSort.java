@@ -1,4 +1,4 @@
-package arithmetic.sort;
+package problem.sort;
 
 import java.util.Arrays;
 

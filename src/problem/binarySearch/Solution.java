@@ -1,4 +1,4 @@
-package arithmetic.binarySearch;
+package problem.binarySearch;
 
 import designPattern.datastracture.Tree.BST.TreeNode;
 

@@ -1,4 +1,4 @@
-package arithmetic.recursion;
+package problem.recursion;
 
 /**
  * @date 2019/11/4 13:49

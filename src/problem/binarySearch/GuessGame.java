@@ -1,4 +1,4 @@
-package arithmetic.binarySearch;
+package problem.binarySearch;
 
 public class GuessGame {
 	static int pick;

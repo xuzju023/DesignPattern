@@ -1,4 +1,4 @@
-package arithmetic.sort;
+package problem.sort;
 
 /**
  * 时间复杂度:O(n2)
