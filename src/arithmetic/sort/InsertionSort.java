@@ -1,12 +1,16 @@
 package arithmetic.sort;
 
+/**
+ * 时间复杂度:O(n2)
+ * https://blog.csdn.net/qq_28081081/article/details/80594386
+ */
 public class InsertionSort {
     static int[] sort(int[] arr){
         int len=arr.length;
         for (int i = 1; i <len ; i++) {
             int temp=arr[i];
             int j=i-1;
-            while(j>=0&&arr[j]<temp){
+            while(j>=0&&arr[j]>temp){
                 arr[j+1]=arr[j];
                 j--;
             }

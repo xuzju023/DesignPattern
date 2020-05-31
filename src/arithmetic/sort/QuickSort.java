@@ -2,6 +2,7 @@ package arithmetic.sort;
 
 /**
  * 快速排序 平均时间复杂度:O(nlogn)	 空间复杂度:O(nlogn)	稳定度：不稳定
+ * 原理:找一个基准值(首位元素) 大于它的放在右边 小于的放在左边
  */
 public class QuickSort {
 

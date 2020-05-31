@@ -1,6 +1,7 @@
 package arithmetic.sort;
 
 /**
+ * 时间复杂度:O（n2)
  * @Author: XuZhiJun
  * @Description:
  * @Date: Created in 9:56 2019/5/7
@@ -8,7 +9,7 @@ package arithmetic.sort;
 public class OoSort {
     static void sort(int[] arr) {
         int size = arr.length;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size-1; i++) {
             for (int j = 0; j < size - 1 - i; j++) {
 
                 if (arr[j + 1] < arr[j]) {
@@ -22,17 +23,11 @@ public class OoSort {
     }
 
     public static void main(String[] args) {
-//        int[] arr={6,3,8,2,9,1};
-//        sort(arr);
-//        for (int i = 0; i <arr.length; i++) {
-//            System.out.println(arr[i]);
-//        }
-        int a=3;
-        int b=4;
-        a=a^0;
-//            b=a^b;
-//          a=a^b;
-        System.out.println(a);
-        System.out.println(b);
+        int[] arr={6,3,8,2,9,1};
+        sort(arr);
+        for (int i = 0; i <arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
     }
 }
