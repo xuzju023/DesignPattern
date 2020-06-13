@@ -2,6 +2,8 @@ package problem.recursion;
 
 import problem.TreeNode;
 
+import arithmetic.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
