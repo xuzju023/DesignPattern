@@ -42,6 +42,8 @@ public class LongestSubString {
     }
 
     public static void main(String[] args) {
+
+
         System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 
