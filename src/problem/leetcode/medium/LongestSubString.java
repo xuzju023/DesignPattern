@@ -29,6 +29,11 @@ public class LongestSubString {
 //    Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
     public static int lengthOfLongestSubstring(String s) {
 
+
+
+
+
+
         if (s.length()==0) return 0;
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int max=0;
@@ -43,7 +48,6 @@ public class LongestSubString {
     }
 
     public static void main(String[] args) {
-
         System.out.println(lengthOfLongestSubstring("dvdf"));
     }
 
