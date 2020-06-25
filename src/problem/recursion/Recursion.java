@@ -2,7 +2,6 @@ package problem.recursion;
 
 import problem.TreeNode;
 
-import arithmetic.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -136,12 +135,14 @@ public class Recursion {
 //            3     2     1      1   3      2
 //            /     /       \                 \
 //            2     1         2                 3
-    public List<TreeNode> generateTrees(int n) {
-
+    public static List<TreeNode> generateTrees(int n) {
+        if(n==0){
+            return  new ArrayList<TreeNode>() ;
+        }
         return genTrees(1, n);
     }
 
-    public List<TreeNode> genTrees(int start, int end) {
+    public static List<TreeNode> genTrees(int start, int end) {
 
         List<TreeNode> list = new ArrayList<TreeNode>();
 
@@ -177,7 +178,10 @@ public class Recursion {
 
 
     public static void main(String[] args) {
-        //1134903170
-        System.out.println(climbStairs(44));
+        test();
+    }
+    public static void test(){
+        List<TreeNode> treeNodes = generateTrees(0);
+        System.out.println(treeNodes);
     }
 }
